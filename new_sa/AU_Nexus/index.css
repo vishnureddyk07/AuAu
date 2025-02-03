@@ -1,0 +1,253 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 10px 0;
+    color: white;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.desktop-nav a, .mobile-menu a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.desktop-nav a:hover, .mobile-menu a:hover {
+    color: #ddd;
+}
+
+.mobile-menu-button {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu-button {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    display: none;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Sliding Background */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slideBackground 12s infinite;
+    z-index: -1;
+}
+
+@keyframes slideBackground {
+    0% { background-image: url('./images/1.jpg'); }
+    33% { background-image: url('./images/2.jpg'); }
+    66% { background-image: url('./images/hariharaveeramallu-firstsinglef.jpg'); }
+    100% { background-image: url('./images/1.jpg'); }
+}
+
+/* Hero Content */
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    max-width: 150px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Tabs Under AU Nexus */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.tab {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+
+/* Statistics Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+    text-align: center;
+    background: #f9fafb;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.stat-card h2 {
+    font-size: 2rem;
+    color: black;
+}
+
+.stat-card p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Review Section */
+.reviews {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.reviews-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.review-slide {
+    flex: 0 0 30%;
+    opacity: 0;
+    animation: slideReviews 15s infinite;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 1s;
+}
+
+.review-slide p {
+    margin-bottom: 10px;
+}
+
+@keyframes slideReviews {
+    0%, 33%, 66%, 100% {
+        opacity: 0;
+    }
+    25%, 58% {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a {
+    color: #00aced;
+    text-decoration: none;
+}

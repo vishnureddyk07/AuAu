@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podcast - AU Nexus</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .video-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+      .video-item {
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .video-item iframe {
+        width: 100%;
+        height: 200px;
+      }
+      .video-info {
+        padding: 10px;
+      }
+      .video-info h4 {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+      .video-info p {
+        font-size: 0.9rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-content">
+          <a href="index.html" class="logo">AU Nexus</a>
+          
+          <!-- Desktop Navigation -->
+          <div class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="podcast.html">Podcast</a>
+          </div>
+
+          <!-- Mobile Navigation Button -->
+          <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="events.html">Events</a>
+          <a href="podcast.html">Podcast</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Podcast Section -->
+    <section class="podcast">
+      <div class="container">
+        <h2>Our Podcast</h2>
+        
+        <!-- Video Gallery -->
+        <div class="video-gallery">
+          <!-- Video Item 1 -->
+          <div class="video-item">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xDMBfSJkAQs?si=rZ10pytBtpioT6Kt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <div class="video-info">
+              <h4>Episode Title 1</h4>
+              <p>In this episode, we explore the latest trends in data science and how it's transforming industries.</p>
+            </div>
+          </div>
+
+          <!-- Video Item 2 -->
+          <div class="video-item">
+            <iframe src="./videos/AU Nexus - Google Chrome 2025-02-02 00-46-12.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h4>Episode Title 2</h4>
+              <p>Join us as we discuss AI in healthcare and its impact on patient care and treatment plans.</p>
+            </div>
+          </div>
+
+          <!-- Video Item 3 -->
+          <div class="video-item">
+            <iframe src="./vigits"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h4>Episode Title 3</h4>
+              <p>This episode covers the rise of machine learning in business and its applications for growth.</p>
+            </div>
+          </div>
+
+          <!-- Video Item 4 -->
+          <div class="video-item">
+            <iframe src="./video.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h4>Episode Title 4</h4>
+              <p>In this episode, we dive deep into the role of AI in cybersecurity and data protection.</p>
+            </div>
+          </div>
+
+          <!-- Video Item 5 -->
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/your-video-id-5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h4>Episode Title 5</h4>
+              <p>Learn about the advancements in AI technology and its potential impact on the workforce.</p>
+            </div>
+          </div>
+
+          <!-- Video Item 6 -->
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/your-video-id-6" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h4>Episode Title 6</h4>
+              <p>Join us as we discuss the environmental impact of AI and how it can drive sustainability efforts.</p>
+            </div>
+          </div>
+
+          <!-- Video Item 7 -->
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/your-video-id-7" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h4>Episode Title 7</h4>
+              <p>Explore how predictive analytics is changing industries like finance and healthcare.</p>
+            </div>
+          </div>
+
+          <!-- Video Item 8 -->
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/your-video-id-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h4>Episode Title 8</h4>
+              <p>In this episode, we explore how AI-powered personalization is revolutionizing consumer experiences.</p>
+            </div>
+          </div>
+
+          <!-- Video Item 9 -->
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/your-video-id-9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h4>Episode Title 9</h4>
+              <p>We discuss AI's role in shaping smart cities and creating sustainable urban environments.</p>
+            </div>
+          </div>
+
+          <!-- Video Item 10 -->
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/your-video-id-10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-info">
+              <h4>Episode Title 10</h4>
+              <p>In this episode, we look at the future of machine learning and its potential to mitigate climate change.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
